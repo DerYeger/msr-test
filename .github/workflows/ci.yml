@@ -1,0 +1,19 @@
+name: CI
+
+on: [pull_request, push]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Setup
+        uses: DerYeger/pnpm-setup-action@master
+        with:
+          node-version: 16
+      - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm release
