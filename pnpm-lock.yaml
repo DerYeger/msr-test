@@ -110,7 +110,7 @@ importers:
     specifiers:
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
-      '@yeger/eslint-config-custom': 2.0.0
+      '@yeger/eslint-config-custom': workspace:*
       '@yeger/tsconfig': workspace:*
       eslint: ^7.32.0
       react: ^18.2.0
