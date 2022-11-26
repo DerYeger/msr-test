@@ -16,7 +16,7 @@
     "eslint": "^7.32.0",
     "@yeger/eslint-config-custom": "2.0.0",
     "react": "^18.2.0",
-    "@yeger/tsconfig": "workspace:^",
+    "@yeger/tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   },
   "publishConfig": {

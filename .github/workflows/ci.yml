@@ -17,3 +17,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm release
+      - name: Update lockfile
+        run: pnpm install
+      - name: Commit lockfile
+        run: |
+          git config --global user.name 'Jan Müller [bot]'
+          git config --global user.email 'janmueller3698@gmail.com
+          git commit -am "Update lockfile"
+          git push

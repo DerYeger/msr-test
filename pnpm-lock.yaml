@@ -10,7 +10,7 @@ importers:
       '@semantic-release/github': 8.0.6
       '@semantic-release/npm': 9.0.1
       '@semantic-release/release-notes-generator': 10.0.3
-      '@yeger/eslint-config-custom': workspace:^
+      '@yeger/eslint-config-custom': workspace:*
       multi-semantic-release: 3.0.1
       prettier: latest
       semantic-release: 19.0.5
@@ -34,9 +34,9 @@ importers:
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
-      '@yeger/eslint-config-custom': workspace:^
-      '@yeger/tsconfig': workspace:^
-      '@yeger/ui': workspace:^
+      '@yeger/eslint-config-custom': workspace:*
+      '@yeger/tsconfig': workspace:*
+      '@yeger/ui': workspace:*
       eslint: 7.32.0
       next: 13.0.0
       react: 18.2.0
@@ -63,9 +63,9 @@ importers:
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
-      '@yeger/eslint-config-custom': workspace:^
-      '@yeger/tsconfig': workspace:^
-      '@yeger/ui': workspace:^
+      '@yeger/eslint-config-custom': workspace:*
+      '@yeger/tsconfig': workspace:*
+      '@yeger/ui': workspace:*
       eslint: 7.32.0
       next: 13.0.0
       react: 18.2.0
@@ -110,8 +110,8 @@ importers:
     specifiers:
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
-      '@yeger/eslint-config-custom': 1.0.0
-      '@yeger/tsconfig': workspace:^
+      '@yeger/eslint-config-custom': 2.0.0
+      '@yeger/tsconfig': workspace:*
       eslint: ^7.32.0
       react: ^18.2.0
       typescript: ^4.5.2
