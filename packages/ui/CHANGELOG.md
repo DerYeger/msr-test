@@ -1,3 +1,23 @@
+# @yeger/ui [2.0.0](https://github.com/DerYeger/msr-test/compare/@yeger/ui@1.0.0...@yeger/ui@2.0.0) (2022-11-26)
+
+
+### Features
+
+* force publish ([de99858](https://github.com/DerYeger/msr-test/commit/de99858b16996628948809ed97ce4f549887f327))
+
+
+### BREAKING CHANGES
+
+* publish
+
+
+
+
+
+### Dependencies
+
+* **@yeger/eslint-config-custom:** upgraded to 2.0.0
+
 # @yeger/ui 1.0.0 (2022-11-26)
 
 
