@@ -23,7 +23,7 @@
     "@semantic-release/github": "8.0.6",
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "@yeger/eslint-config-custom": "workspace:*",
+    "@yeger/eslint-config-custom": "workspace:^",
     "multi-semantic-release": "3.0.1",
     "prettier": "latest",
     "semantic-release": "19.0.5",

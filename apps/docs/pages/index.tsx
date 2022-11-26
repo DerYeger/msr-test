@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from "@yeger/ui";
 
 export default function Docs() {
   return (
