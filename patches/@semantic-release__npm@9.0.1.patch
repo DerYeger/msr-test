@@ -1,0 +1,62 @@
+diff --git a/lib/publish.js b/lib/publish.js
+index ff3af00789942572806e52627b5e22c8ac25d1b1..1a265c29abca564387d4b7c11980d23b8f4180fc 100644
+--- a/lib/publish.js
++++ b/lib/publish.js
+@@ -21,8 +21,8 @@ module.exports = async (npmrc, {npmPublish, pkgRoot}, pkg, context) => {
+ 
+     logger.log(`Publishing version ${version} to npm registry on dist-tag ${distTag}`);
+     const result = execa(
+-      'npm',
+-      ['publish', basePath, '--userconfig', npmrc, '--tag', distTag, '--registry', registry],
++      'pnpm',
++      ['publish', basePath, '--tag', distTag, '--registry', registry],
+       {cwd, env, preferLocal: true}
+     );
+     result.stdout.pipe(stdout, {end: false});
+diff --git a/lib/verify-auth.js b/lib/verify-auth.js
+index bd7efc08622e29b9681a073f0de2339434c19ff8..e5aafba4775b6d771ed4d2521b64157a61d20c1b 100644
+--- a/lib/verify-auth.js
++++ b/lib/verify-auth.js
+@@ -1,14 +1,14 @@
+-const execa = require('execa');
+-const normalizeUrl = require('normalize-url');
+-const AggregateError = require('aggregate-error');
+-const getError = require('./get-error');
+-const getRegistry = require('./get-registry');
+-const setNpmrcAuth = require('./set-npmrc-auth');
++const execa = require("execa");
++const normalizeUrl = require("normalize-url");
++const AggregateError = require("aggregate-error");
++const getError = require("./get-error");
++const getRegistry = require("./get-registry");
++const setNpmrcAuth = require("./set-npmrc-auth");
+ 
+ module.exports = async (npmrc, pkg, context) => {
+   const {
+     cwd,
+-    env: {DEFAULT_NPM_REGISTRY = 'https://registry.npmjs.org/', ...env},
++    env: { DEFAULT_NPM_REGISTRY = "https://registry.npmjs.org/", ...env },
+     stdout,
+     stderr,
+   } = context;
+@@ -18,16 +18,16 @@ module.exports = async (npmrc, pkg, context) => {
+ 
+   if (normalizeUrl(registry) === normalizeUrl(DEFAULT_NPM_REGISTRY)) {
+     try {
+-      const whoamiResult = execa('npm', ['whoami', '--userconfig', npmrc, '--registry', registry], {
++      const whoamiResult = execa("npm", ["whoami", "--userconfig", npmrc, "--registry", registry, "--no-workspaces"], {
+         cwd,
+         env,
+         preferLocal: true,
+       });
+-      whoamiResult.stdout.pipe(stdout, {end: false});
+-      whoamiResult.stderr.pipe(stderr, {end: false});
++      whoamiResult.stdout.pipe(stdout, { end: false });
++      whoamiResult.stderr.pipe(stderr, { end: false });
+       await whoamiResult;
+     } catch {
+-      throw new AggregateError([getError('EINVALIDNPMTOKEN', {registry})]);
++      throw new AggregateError([getError("EINVALIDNPMTOKEN", { registry })]);
+     }
+   }
+ };
