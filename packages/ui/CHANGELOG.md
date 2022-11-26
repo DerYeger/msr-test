@@ -1,3 +1,15 @@
+# @yeger/ui [3.0.0](https://github.com/DerYeger/msr-test/compare/@yeger/ui@2.0.0...@yeger/ui@3.0.0) (2022-11-26)
+
+
+### Features
+
+* stabilize lockfiles ([e236695](https://github.com/DerYeger/msr-test/commit/e23669508cac0fa0bee9e3f33aede9d6da6d3791))
+
+
+### BREAKING CHANGES
+
+* force update
+
 # @yeger/ui [2.0.0](https://github.com/DerYeger/msr-test/compare/@yeger/ui@1.0.0...@yeger/ui@2.0.0) (2022-11-26)
 
 
