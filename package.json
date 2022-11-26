@@ -14,7 +14,7 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "release": "multi-semantic-release --sequential-init --dry-run --ignore-private-packages"
+    "release": "multi-semantic-release --sequential-init --ignore-private-packages"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
