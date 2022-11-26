@@ -1,0 +1,22 @@
+{
+  "name": "@yeger/ui",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "repository": {
+    "url": "https://github.com/DerYeger/msr-test"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^7.32.0",
+    "@yeger/eslint-config-custom": "workspace:*",
+    "react": "^18.2.0",
+    "@yeger/tsconfig": "workspace:*",
+    "typescript": "^4.5.2"
+  }
+}

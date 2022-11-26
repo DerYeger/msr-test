@@ -1,0 +1,36 @@
+{
+  "name": "yeger",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "url": "https://github.com/DerYeger/msr-test"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "release": "multi-semantic-release --sequential-init --dry-run --ignore-private-packages"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "8.0.6",
+    "@semantic-release/npm": "9.0.1",
+    "@semantic-release/release-notes-generator": "10.0.3",
+    "@yeger/eslint-config-custom": "workspace:*",
+    "multi-semantic-release": "3.0.1",
+    "prettier": "latest",
+    "semantic-release": "19.0.5",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@7.14.2"
+}
