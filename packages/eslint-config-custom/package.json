@@ -1,6 +1,6 @@
 {
   "name": "@yeger/eslint-config-custom",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": {
     "url": "https://github.com/DerYeger/msr-test"
