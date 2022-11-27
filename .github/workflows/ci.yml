@@ -12,11 +12,23 @@ jobs:
         uses: DerYeger/pnpm-setup-action@master
         with:
           node-version: 16
+      - name: Build Packages
+        run: pnpm build
       - name: Release
+        uses: changesets/action@v1
+        with:
+          version: pnpm run version
+          publish: pnpm exec changeset publish
+          commit: '[ci] release'
+          title: '[ci] release'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm release
+      # - name: Release
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   run: pnpm release
       # - name: Update lockfile
       #   run: pnpm install
       # - name: Commit lockfile
